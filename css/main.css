@@ -125,6 +125,14 @@ ul {
     align-items: center;
 }
 
+.social__item {
+    transition: all .2s;
+}
+
+.social__item:hover {
+    transform: translateY(-2px);
+}
+
 .social__link {
     padding: 0 10px;
 }
@@ -654,3 +662,80 @@ ul {
         width: 280px;
     }
 }
+
+
+
+
+
+.animation-left {
+    animation: animationLeft 1s ease-out 1s;
+    animation-fill-mode: backwards;
+}
+.animation-right {
+    animation: animationRight 1s ease-out 2s;
+    animation-fill-mode: backwards;
+}
+.animation-top {
+    animation: animationTop 1s ease-out;
+}
+.animation-bottom {
+    animation: animationBottom 1s ease-out .5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes animationLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+  
+    80% {
+      transform: translateX(10px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+@keyframes animationRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+  
+    80% {
+      transform: translateX(-10px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+@keyframes animationTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+@keyframes animationBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  
+    80% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
